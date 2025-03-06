@@ -17,6 +17,15 @@ struct FavouriteJokesView: View {
     // MARK: Computed properties
     var body: some View {
         NavigationStack {
+            
+            ZStack {
+                // Background layer
+                Color.forFavouriteJokes
+                    .ignoresSafeArea()
+                 
+                // Foreground layer
+            }
+            
             VStack {
                 // When there are no saved jokes...
                 if viewModel.favouriteJokes.isEmpty {
