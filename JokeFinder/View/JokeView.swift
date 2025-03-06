@@ -11,8 +11,8 @@ struct JokeView: View {
     
     // MARK: Stored properties
     
-    // Create the view model (temporarily show the default joke)
-    @State var viewModel = JokeViewModel()
+    // Access the view model from the environment
+    @Environment(JokeViewModel.self) var viewModel
     
     // Controls punchline visibility
     @State var punchlineOpacity = 0.0
@@ -28,7 +28,7 @@ struct JokeView: View {
     
     // Starts a timer to wait on revealing button to get new joke
     @State var buttonTimer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
-
+    
     
     // MARK: Computed properties
     var body: some View {
@@ -121,7 +121,8 @@ struct JokeView: View {
         }
     }
 }
- 
+
 #Preview {
     JokeView()
+        .environment(JokeViewModel())
 }

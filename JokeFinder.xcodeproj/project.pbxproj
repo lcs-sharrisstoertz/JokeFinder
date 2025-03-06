@@ -96,9 +96,9 @@
 		261C9F172D763CF40016D62C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				261C9F492D79EF0E0016D62C /* LandingView.swift */,
 				261C9F0D2D763C760016D62C /* JokeView.swift */,
 				261C9F472D79EEE10016D62C /* FavouriteJokesView.swift */,
-				261C9F492D79EF0E0016D62C /* LandingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
